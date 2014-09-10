@@ -22,5 +22,6 @@
 --------------------------------------------------------------------------------
 
 ###แผนผังกรณีการใช้งาน (Use Case Diagram)
-![Use case]()
+![Use case](https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/images/Use%20Case%20Diagram.jpg)
+
 --------------------------------------------------------------------------------
