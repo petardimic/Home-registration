@@ -137,10 +137,12 @@
 --------------------------------------------------------------------------------
 
 ###แผนผังกิจกรรม (Activity Diagram)
+**แผนผังกิจกรรมของผู้ใช้ (User Activity Diagram)**
 ![User AD](https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/images/Activity%20Diagram1.jpg)
 
 =====================================================================================
 
+**แผนผังกิจกรรมของเจ้าหน้าที่ (Officer Activity Diagram)**
 ![Officer AD](https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/images/Activity%20Diagram2.jpg)
 
 -----------------------------------------------------------------------------------
