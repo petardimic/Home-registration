@@ -1,8 +1,8 @@
-#ความต้องการและกรณีการใช้งาน (Requirements & Use Cases)
-###วิชา: Object-oriented Analysis and Design Fall 2014 @ KMITL  
-###ชื่อโปรเจค: ระบบทะเบียนบ้าน
-###ชื่อกลุ่ม: U-place
-###รายชื่อสมาชิกในกลุ่ม:
+###ความต้องการและกรณีการใช้งาน (Requirements & Use Cases)
+**วิชา:** Object-oriented Analysis and Design Fall 2014 @ KMITL  
+**ชื่อโปรเจค:** ระบบทะเบียนบ้าน
+**ชื่อกลุ่ม:** U-place
+**รายชื่อสมาชิกในกลุ่ม:**
     1.นายธนัท    ปิ่นศิโรดม   55010526
     2.นายธีรพันธ์  อาชีพโกศล  55010581
 
@@ -134,7 +134,7 @@
 
 ###แผนผังกิจกรรม (Activity Diagram)
 ![User AD](https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/images/Activity%20Diagram1.jpg)
-
+-----------------------------------------------------------------------------------
 ![Officer AD](https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/images/Activity%20Diagram2.jpg)
 
 -----------------------------------------------------------------------------------
