@@ -1,5 +1,5 @@
 ###ความต้องการและกรณีการใช้งาน (Requirements & Use Cases)
-**วิชา:** Object-oriented Analysis and Design Fall 2014 @ KMITL  
+**วิชา:** Object-oriented Analysis and Design  
 
 **ชื่อโปรเจค:** ระบบทะเบียนบ้าน
 
