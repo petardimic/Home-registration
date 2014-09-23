@@ -63,6 +63,6 @@
 ========================================================
 
 ###คลาสโดเมน (Domain Classes) 
-![CDII] (https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/images/Class%20Diagram1.jpg)
+
 
 ========================================================
