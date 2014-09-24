@@ -90,7 +90,7 @@
 * Laravel php Framework
 * MySQL ใช้จัดการฐานข้อมูล
 * phpMyAdmin
-* VM (Microsoft Azure) IP address : 
+* VM (Microsoft Azure) IP address : 23.101.16.52
 * XAMPP Apache web server เพื่อจำลองการทำงาน
 * Bootstrap เป็น Frontend Framework
 
