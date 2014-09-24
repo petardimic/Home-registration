@@ -74,8 +74,8 @@
 
 
 ###แผนผังลำดับ (Sequence Diagram)
-![] ()
-![] ()
+![SDI-VII] (https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/images/Sequence%20Diagram1.jpg)
+![SDII-VII] (https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/images/Sequence%20Diagram2.jpg)
 
 ========================================================
 
