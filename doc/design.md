@@ -87,6 +87,12 @@
 ========================================================
 
 ###เทคโนโลยีที่ใช้ (Deployment)
+* Laravel php Framework
+* MySQL ใช้จัดการฐานข้อมูล
+* phpMyAdmin
+* VM (Microsoft Azure) IP address : 
+* XAMPP Apache web server เพื่อจำลองการทำงาน
+* Bootstrap เป็น Frontend Framework
 
 ========================================================
 
