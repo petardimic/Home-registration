@@ -1,5 +1,5 @@
 ###Architectural Design, UML diagrams & Implementation Plan
-**วิชา:** Object-oriented Analysis and Design  
+**วิชา:** Object-oriented Analysis and Design  Fall 2014 @KMITL
 
 **ชื่อโปรเจค:** ระบบทะเบียนบ้าน
 
@@ -13,12 +13,13 @@
 ==================================================================
 
 ###วิเคราะห์ปัญหา (Problem Analysis)
+**สาระสังเขป (Abstraction)**
 * **บัญชีผู้ใช้ (User Profile):** 
 สามารถให้ผู้ใช้ดำเนินการ ย้ายทะเบียนราษฎร์ เปลี่ยนแปลงเจ้าของทะเบียนราษฎร์ เปลี่ยนแปลงข้อมูลผู้อาศัยในทะเบียนราษฎร์ และขอทะเบียนราษฎร์ใหม่
 * **บัญชีเจ้าหน้าที่ (Officer Profile):** เจ้าหน้าที่สามารถดำเนิการค้นหาข้อมูลทะเบียนราษฎร์ รับคำร้องจากผู้ใช้ และดำเนินการตามคำร้อง
 
 =======================================================
-###แนวคิดการพัฒนาระบบ (Application Architecture)
+###สถาปัตยกรรมแอปพลิเคชั่น (Application Architecture)
 ![AAIII] (https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/images/application_architectureII.jpg)
 
 
