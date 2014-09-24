@@ -87,7 +87,7 @@
 ========================================================
 
 ###เทคโนโลยีที่ใช้ (Deployment)
-! [] https://www.tomsplanner.com/?template=new#doc=xKzmrJWmPlrOTxJDIBLK
+! [] (https://www.tomsplanner.com/?template=new#doc=xKzmrJWmPlrOTxJDIBLK)
 ========================================================
 
 ###แผนการดำเนินงาน (Implementation Plan)
