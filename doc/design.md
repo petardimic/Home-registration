@@ -19,7 +19,7 @@
 
 =======================================================
 ###แนวคิดการพัฒนาระบบ (Application Architecture)
-![AppArcV-II] (https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/images/apparcv_2.jpg)
+![AAIII] (https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/images/application_architectureII.jpg)
 
 
 * **บัญชีผู้ใช้ (User Profile):** ผู้ใช้สามารถทำการย้ายทะเบียน เปลียนแปลงข้อมูลผู้อยู่อาศัย เปลี่ยนเจ้าของบ้าน และ ขอทะเบียนใหม่ได้ และยังทำหน้าที่เป็นส่วนติดต่อกับผู้ใช้ (User Interface)
@@ -78,6 +78,6 @@
 ========================================================
 
 ###คลาสโดเมน (Domain Classes) 
-
+![CD2] (https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/images/Class%20Diagram%202.jpg)
 
 ========================================================
