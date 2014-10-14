@@ -82,7 +82,7 @@
 ========================================================
 
 ###คลาสโดเมน (Domain Classes) 
-![CD2] (https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/images/Class%20Diagram%202.jpg)
+![newClassDiagram] (https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/images/New%20Class%20Diagram.jpg)
 
 ========================================================
 
