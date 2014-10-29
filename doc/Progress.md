@@ -9,7 +9,8 @@
  
 =========================================================================================================
 ###Test
-https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/app/tests/Test.php
+RegisterTest : https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/app/tests/RegisterTest.php
+LoginTest : https://github.com/CE-KMITL-OOAD-2014/Home-registration/blob/master/app/tests/LoginTest
 
 ==========================================================================================================
 ###Evaluation
