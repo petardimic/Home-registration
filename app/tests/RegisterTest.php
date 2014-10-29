@@ -1,6 +1,6 @@
 <?php
 
-class Test extends TestCase{
+class RegisterTest extends TestCase{
 	public function testRegister(){
 		$this->seed('RolesSeeder');
 		$this->seed('UserTableSeeder');
