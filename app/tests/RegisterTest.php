@@ -18,19 +18,5 @@ class Test extends TestCase{
 		$react = $this->action('POST','RegisterController@postRegister',$test);
 		$this->assertRedirectedTo('register');
 	}
-	public function testLogin(){
-
-		$test = array(
-			'username' => 'testUsername',
-			'password' => 'testPassword',
-			);
-		$react = $this->action('POST','LoginController@postLogin',$test);
-		$this->assertRedirectedTo('profile');
-	}
-	public function testLogout(){
-		$react = $this->call('GET','logout');
-
-		$this->assertRedirectedTo('');
-	}
 }
 ?>
