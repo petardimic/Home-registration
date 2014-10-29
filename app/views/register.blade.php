@@ -64,6 +64,16 @@
         </div>
     </div>
 
+    <!-- Address -->
+    <div class="control-group {{{ $errors->has('address') ? 'error' : '' }}}">
+        {{ Form::label('address', 'Address', array('class' => 'control-label')) }}
+
+        <div class="controls">
+            {{ Form::text('address', Input::old('address')) }}
+            {{ $errors->first('address') }}
+        </div>
+    </div>
+
     <!-- Email -->
     <div class="control-group {{{ $errors->has('email') ? 'error' : '' }}}">
         {{ Form::label('email', 'E-mail', array('class' => 'control-label')) }}

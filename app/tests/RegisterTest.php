@@ -10,6 +10,7 @@ class RegisterTest extends TestCase{
 			'name'     => 'testName',
 			'surname'  => 'testSurName',
 			'idcard'   => '1234567890123',
+			'address'  => '123/40 HomeTest Bangkok',
 			'email'    => 'testEmail@hotmail.com',
 			);
 		$react = $this->action('POST','RegisterController@postRegister',$test);

@@ -29,6 +29,14 @@
 	?>
 	<br><B>
 	<?php
+		echo "Address : ";
+	?>
+	</B>
+	<?php
+		echo $users->address;
+	?>
+	<br><B>
+	<?php
 		echo "E-mail : "; 
 	?>
 	</B>

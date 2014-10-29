@@ -15,6 +15,7 @@ class RegisterController extends BaseController {
             'name'	   => Input::get('name'),
             'surname'  => Input::get('surname'),
             'idcard'   => Input::get('idcard'),
+            'address'  => Input::get('address'),
             'email'    => Input::get('email')
         );
 
@@ -25,6 +26,7 @@ class RegisterController extends BaseController {
             'name'		=> 'Required',
             'surname'   => 'Required',
             'idcard'    => 'Required',
+            'address'   => 'Required',
             'email'		=> 'Required'
         );
 
