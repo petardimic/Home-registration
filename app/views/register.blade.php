@@ -56,7 +56,7 @@
 
     <!-- ID-card -->
     <div class="control-group {{{ $errors->has('idcard') ? 'error' : '' }}}">
-        {{ Form::label('idcard', 'ID-Card', array('class' => 'control-label')) }}
+        {{ Form::label('idcard', 'ID Number', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('idcard', Input::old('idcard')) }}

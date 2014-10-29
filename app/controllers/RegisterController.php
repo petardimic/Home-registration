@@ -14,7 +14,7 @@ class RegisterController extends BaseController {
             'password' => Hash::make(Input::get('password')),
             'name'	   => Input::get('name'),
             'surname'  => Input::get('surname'),
-            'id-card'  => Input::get('idcard'),
+            'idcard'   => Input::get('idcard'),
             'email'    => Input::get('email')
         );
 
@@ -35,13 +35,20 @@ class RegisterController extends BaseController {
         if ($validator->passes())
         {
             user::create($userdata);
+        //----user map to roles-------------------------------------------------------
+            Auth::attempt(array('username' => Input::get('username'),
+                                'password' => Input::get('password')));
+            $user = User::find(Auth::id());
+            $user->roles()->attach(3);
+            Auth::logout();
+        //----------------------------------------------------------------------------
              // Redirect to homepage
-            return Redirect::to('')->with('success', 'You have register in successfully');
+            return Redirect::to('login')->with('success', 'You have register in successfully');
             }
             
            else {
            // Something went wrong.
-        return Redirect::to('register')->withErrors($validator)->withInput(Input::except('fail'));
+            return Redirect::to('register')->withErrors($validator)->withInput(Input::except('fail'));
         }
 
         

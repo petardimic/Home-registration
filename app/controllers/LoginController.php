@@ -44,7 +44,7 @@ class LoginController extends BaseController {
             if (Auth::attempt($userdata))
             {
                 // Redirect to homepage
-                return Redirect::to('')->with('success', 'You have logged in successfully');
+                return Redirect::to('profile')->with('success', 'You have logged in successfully');
             }
             else
             {

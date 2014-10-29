@@ -21,4 +21,4 @@ Route::get('register', 'RegisterController@showRegister');
 Route::post('register', 'RegisterController@postRegister');
 
 Route::get('profile', 'ProfileController@showProfile');
-Route::post('profile', 'ProfileController@postProfile');
+//Route::post('profile', 'ProfileController@postProfile');
