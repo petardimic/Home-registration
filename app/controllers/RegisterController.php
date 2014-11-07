@@ -1,6 +1,7 @@
 <?php
 
 class RegisterController extends BaseController {
+    
 	public function showRegister()
 	{
 		return View::make('register');
@@ -36,17 +37,19 @@ class RegisterController extends BaseController {
         // Check if the form validates with success.
         if ($validator->passes())
         {
-            user::create($userdata);
+            User::create($userdata);
         //----user map to roles-------------------------------------------------------
             Auth::attempt(array('username' => Input::get('username'),
                                 'password' => Input::get('password')));
             $user = User::find(Auth::id());
-            $user->roles()->attach(3);
+            /*if($user->username == 'admin1') $user->roles()->attach(2);
+            else*/  $user->roles()->attach(3);
             Auth::logout();
+        
         //----------------------------------------------------------------------------
              // Redirect to homepage
             return Redirect::to('login')->with('success', 'You have register in successfully');
-            }
+         }   
             
            else {
            // Something went wrong.

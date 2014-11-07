@@ -20,14 +20,5 @@ class RolesSeeder extends Seeder {
         $role2 = new Role;
         $role2->role = 'user';
         $role2->save();
-
-        // alternativ to eloquent we can also use direct database-methods
-        /*
-        User::create(array(
-            'username'  => 'admin',
-            'password'  => Hash::make('password'),
-            'email'     => 'admin@localhost'
-        ));
-        */
     }
 }

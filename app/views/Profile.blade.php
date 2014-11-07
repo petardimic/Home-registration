@@ -44,5 +44,23 @@
 		echo $users->email;
 	?>
 		<br></br>
+	@if(Auth::id() == 1)
+    	<div class="control-group">
+        	<div class="controls">
+            	{{ HTML::link('register', 'AddOfficer') }}
+        	</div>
+    	</div>
+    @else 
+    	<div class="control-group">
+        	<div class="controls">
+            	{{ HTML::link('homeregis', 'Add Home') }}
+            	<br>
+            	{{ HTML::link('member', 'Add Member') }}
+            	<!-- Move -->
+            	<!-- Change Owner -->
+        	</div>
+    	</div>
+
+	@endif
 </p>
 @stop
