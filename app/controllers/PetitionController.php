@@ -4,8 +4,7 @@ class PetitionController extends BaseController {
 
 	public function showPetition($types)
 	{
-		return View::make('petition')
-		->with('type',$types);
+		return View::make('petition')->with('type',$types);
 	}
 
 
@@ -29,6 +28,7 @@ class PetitionController extends BaseController {
         	$new_pet=Petition::create($petitiondata);
         	$new_pet->type = $type;
         	$new_pet->save();
+        	echo $new_pet->type;
         	return Redirect::to('profile')->with('success', 'You have register in successfully');
         }
         else

@@ -46,7 +46,6 @@
 	?>
 		<br></br>
 
-
 	@if($users->permission == "Admin")
     	<div class="control-group">
         	<div class="controls">
@@ -56,13 +55,12 @@
     @elseif($users->permission == "Officer")
     	<div class="control-group">
         	<div class="controls">
-            	{{ HTML::link('petition', 'ดูคำร้อง') }}
+            	{{ HTML::link('officer', 'ดูคำร้อง') }}
         	</div>
     	</div>
     @else
     	<div class="control-group">
         	<div class="controls">
-
             	{{ HTML::link('petition/1', 'ส่งคำร้องขอย้ายที่อยู่') }}
             	<br>
             	{{ HTML::link('petition/2', 'ส่งคำร้องขอทะเบียนบ้านใหม่') }}

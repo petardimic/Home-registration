@@ -41,13 +41,11 @@ class HomeRegisController extends BaseController{
             if ($validator->passes())
             {
                   HomeRegis::create($homedata);
-                  $home = HomeRegis::find(Auth::id());
-                  $home->users()->attach($home->id);
                   return Redirect::to('profile')->with('success', 'You have register in successfully');
             }
             else {
            // Something went wrong.
-                  return Redirect::to('homeregis')->withErrors($validator)->withInput(Input::except('fail'));
+                  return Redirect::back()->withErrors($validator)->withInput(Input::except('fail'));
             }
 	}
 }

@@ -9,7 +9,7 @@
 @section('content')
 <h1>HomeRegis</h1>
 
-{{ Form::open(array('url' => 'homeregis', 'class' => 'form-horizontal')) }}
+{{ Form::open(array('url' => 'homeregis/', 'class' => 'form-horizontal')) }}
 	<!--Book No.-->
 	<div class="control-group {{{ $errors->has('bookNo') ? 'error' : '' }}}">
         {{ Form::label('bookNo', 'Book No.', array('class' => 'control-label')) }}
@@ -127,6 +127,5 @@
             {{ Form::submit('OK', array('class' => 'btn')) }}
         </div>
     </div>
-
     {{ Form::close() }}
 @stop

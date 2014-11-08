@@ -23,16 +23,17 @@ Route::post('register', 'RegisterController@postRegister');
 Route::get('profile', 'ProfileController@showProfile');
 //Route::post('profile', 'ProfileController@postProfile');
 
-Route::get('homeregis', 'HomeRegisController@showHomeRegis');
-Route::post('homeregis', 'HomeRegisController@postHomeRegis');
+Route::get('homeregis/{id_incre_pet}', 'HomeRegisController@showHomeRegis');
+Route::post('homeregis/{id_incre_pet}', 'HomeRegisController@postHomeRegis');
 
 Route::get('member', 'MemberController@showMember');
 Route::post('member', 'MemberController@postMember');
 
-//Route::get('AddOfficer', 'OfficerRegisterController@showRegister');
-//Route::post('AddOfficer', 'OfficerRegisterController@postOfficer');
 
 Route::get('petition/{types}','PetitionController@showPetition');
 Route::post('petition/{types}','PetitionController@postPetition');
+
+Route::get('officer','OfficerController@showOfficer');
+
 
 ?>

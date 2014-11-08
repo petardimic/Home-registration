@@ -85,7 +85,7 @@
     </div>
 
     <!-- Submit button -->
-    <br></br>
+    <br>
     <div class="control-group">
         <div class="controls">
             {{ Form::submit('Submit', array('class' => 'btn')) }}

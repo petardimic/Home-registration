@@ -4,7 +4,7 @@ class RegisterController extends BaseController {
     
 	public function showRegister()
 	{
-		return View::make('register');
+		  return View::make('register');
 	}
 
 
@@ -41,6 +41,7 @@ class RegisterController extends BaseController {
             $user = User::find(Auth::id());
             if(!Auth::guest()){
                 $new_user ->permission = "Officer";
+                $new_user ->address = "-";
                 $new_user ->save();
             }
             else {
