@@ -32,4 +32,7 @@ Route::post('member', 'MemberController@postMember');
 //Route::get('AddOfficer', 'OfficerRegisterController@showRegister');
 //Route::post('AddOfficer', 'OfficerRegisterController@postOfficer');
 
+Route::get('petition/{types}','PetitionController@showPetition');
+Route::post('petition/{types}','PetitionController@postPetition');
+
 ?>

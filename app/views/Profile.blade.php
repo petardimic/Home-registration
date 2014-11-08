@@ -10,6 +10,7 @@
 <p>
 	<B>
 	<?php	
+
 		$users = User::find(Auth::id());
 		echo "Name : ";
 	?>
@@ -44,23 +45,33 @@
 		echo $users->email;
 	?>
 		<br></br>
-	@if(Auth::id() == 1)
+
+
+	@if($users->permission == "Admin")
     	<div class="control-group">
         	<div class="controls">
             	{{ HTML::link('register', 'AddOfficer') }}
         	</div>
     	</div>
-    @else 
+    @elseif($users->permission == "Officer")
     	<div class="control-group">
         	<div class="controls">
-            	{{ HTML::link('homeregis', 'Add Home') }}
-            	<br>
-            	{{ HTML::link('member', 'Add Member') }}
-            	<!-- Move -->
-            	<!-- Change Owner -->
+            	{{ HTML::link('petition', 'ดูคำร้อง') }}
         	</div>
     	</div>
+    @else
+    	<div class="control-group">
+        	<div class="controls">
 
+            	{{ HTML::link('petition/1', 'ส่งคำร้องขอย้ายที่อยู่') }}
+            	<br>
+            	{{ HTML::link('petition/2', 'ส่งคำร้องขอทะเบียนบ้านใหม่') }}
+            	<br>
+            	{{ HTML::link('petition/3', 'ส่งคำร้องขอเปลี่ยนเจ้าของที่อยู่') }}
+            	<br>
+            	{{ HTML::link('petition/4', 'ส่งคำร้องขอเปลี่ยนแปลงข้อมูลผู้อยู่อาศัย') }}
+        	</div>
+    	</div>
 	@endif
 </p>
 @stop
