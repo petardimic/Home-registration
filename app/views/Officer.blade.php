@@ -16,6 +16,7 @@
 	<?php
 
 	$pet = petition::all();
+    $user = user::all();
 	 ?>
 		@if($pet != null)
 		<p><B>Petition Table</B></p>
@@ -34,7 +35,7 @@
  					else $ty = "เปลี่ยนแปลงข้อมูลผู้อาศัย";
  				?>
  				<tr>
-    				<td> <?php echo $print->name ?> </td>
+    				<td> <?php echo User::find(  petition::find(9)->name)->name?> </td>
     				<td> <?php echo $print->textPetition ?> </td>
     				<td> <?php echo $ty ?> </td>
     				<td> {{ HTML::link('homeregis/'.$print->id, 'ดำเนินการ') }} </td>

@@ -2,12 +2,12 @@
 
 class HomeRegisController extends BaseController{
 
-	public function showHomeRegis()
+	public function showHomeRegis($id)
 	{
-		return View::make('homeregis');
+		return View::make('homeregis')->with('id',$id);
 	}
 
-	public function postHomeRegis(){
+	public function postHomeRegis($id){
 
 		 $homedata = array(
                   'bookNo'		=> Input::get('bookNo'), //Book Number
@@ -40,6 +40,8 @@ class HomeRegisController extends BaseController{
 		$validator = Validator::make($homedata, $home);
             if ($validator->passes())
             {
+                  $user = User::all();
+                  
                   HomeRegis::create($homedata);
                   return Redirect::to('profile')->with('success', 'You have register in successfully');
             }

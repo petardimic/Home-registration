@@ -30,8 +30,8 @@ Route::get('member', 'MemberController@showMember');
 Route::post('member', 'MemberController@postMember');
 
 
-Route::get('petition/{types}','PetitionController@showPetition');
-Route::post('petition/{types}','PetitionController@postPetition');
+Route::get('petition/{types}/{id_user}','PetitionController@showPetition');
+Route::post('petition/{types}/{id_user}','PetitionController@postPetition');
 
 Route::get('officer','OfficerController@showOfficer');
 

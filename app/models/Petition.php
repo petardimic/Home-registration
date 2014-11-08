@@ -12,5 +12,5 @@ class Petition extends Eloquent{
 	 *
 	 * @var array
 	 */
-	protected $fillable = array('name', 'textPetition');
+	protected $fillable = array( 'textPetition');
 }

@@ -2,22 +2,20 @@
 
 class PetitionController extends BaseController {
 
-	public function showPetition($types)
+	public function showPetition($types,$id_user)
 	{
-		return View::make('petition')->with('type',$types);
+		return View::make('petition')->with('type',$types)->with('id_increment',$id_user);
 	}
 
 
-	public function postPetition($type)
+	public function postPetition($type,$id_increment)
 	{
 
 		$petitiondata = array(
-			'name' => Input::get('name'),
 			'textPetition' => Input::get('textPetition')
 		);
 
 		$petition = array(
-			'name' => 'Required',
 			'textPetition' => 'Required'
 		);
 
@@ -27,8 +25,8 @@ class PetitionController extends BaseController {
         {
         	$new_pet=Petition::create($petitiondata);
         	$new_pet->type = $type;
+        	$new_pet->name = User::find($id_increment)->id;
         	$new_pet->save();
-        	echo $new_pet->type;
         	return Redirect::to('profile')->with('success', 'You have register in successfully');
         }
         else

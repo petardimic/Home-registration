@@ -61,13 +61,13 @@
     @else
     	<div class="control-group">
         	<div class="controls">
-            	{{ HTML::link('petition/1', 'ส่งคำร้องขอย้ายที่อยู่') }}
+            	{{ HTML::link('petition/1/'.$users->id, 'ส่งคำร้องขอย้ายที่อยู่') }}
             	<br>
-            	{{ HTML::link('petition/2', 'ส่งคำร้องขอทะเบียนบ้านใหม่') }}
+            	{{ HTML::link('petition/2/'.$users->id, 'ส่งคำร้องขอทะเบียนบ้านใหม่') }}
             	<br>
-            	{{ HTML::link('petition/3', 'ส่งคำร้องขอเปลี่ยนเจ้าของที่อยู่') }}
+            	{{ HTML::link('petition/3/'.$users->id, 'ส่งคำร้องขอเปลี่ยนเจ้าของที่อยู่') }}
             	<br>
-            	{{ HTML::link('petition/4', 'ส่งคำร้องขอเปลี่ยนแปลงข้อมูลผู้อยู่อาศัย') }}
+            	{{ HTML::link('petition/4/'.$users->id, 'ส่งคำร้องขอเปลี่ยนแปลงข้อมูลผู้อยู่อาศัย') }}
         	</div>
     	</div>
 	@endif
