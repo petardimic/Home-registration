@@ -37,13 +37,17 @@ class RegisterController extends BaseController {
         // Check if the form validates with success.
         if ($validator->passes())
         {
-            User::create($userdata);
-        //----user map to roles-------------------------------------------------------
-            Auth::attempt(array('username' => Input::get('username'),
-                                'password' => Input::get('password')));
+            $new_user = User::create($userdata);
             $user = User::find(Auth::id());
-            /*if($user->username == 'admin1') $user->roles()->attach(2);
-            else*/  $user->roles()->attach(3);
+            if(!Auth::guest()){
+                $new_user ->permission = "Officer";
+                $new_user ->save();
+            }
+            else {
+                $new_user ->permission = "User ";
+                $new_user ->save();
+            }
+        
             Auth::logout();
         
         //----------------------------------------------------------------------------
@@ -55,7 +59,6 @@ class RegisterController extends BaseController {
            // Something went wrong.
             return Redirect::to('register')->withErrors($validator)->withInput(Input::except('fail'));
         }
-
         
     }
 	

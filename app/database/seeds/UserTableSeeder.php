@@ -11,6 +11,7 @@ class UserTableSeeder extends Seeder {
 
         // add user using Eloquent
         $user = new User;
+        $user->permission = 'Admin';
         $user->name = 'Gendou';
         $user->surname = 'Ikari';
         $user->username = 'admin1';
