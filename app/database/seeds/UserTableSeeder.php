@@ -17,7 +17,6 @@ class UserTableSeeder extends Seeder {
         $user->username = 'admin1';
         $user->password = Hash::make('1142');
         $user->idcard = '1111111111111';
-        $user->address = '1142/58 adminHome Bangkok';
         $user->email = 'admin@localhost';
         $user->save();
 
@@ -28,7 +27,6 @@ class UserTableSeeder extends Seeder {
         $user1->username = 'Off';
         $user1->password = Hash::make('123');
         $user1->idcard = '1111111111111';
-        $user1->address = '1142/58 adminHome Bangkok';
         $user1->email = 'admin@localhost';
         $user1->save();
 
@@ -39,7 +37,6 @@ class UserTableSeeder extends Seeder {
         $user2->username = 'bell';
         $user2->password = Hash::make('123');
         $user2->idcard = '1111111111111';
-        $user2->address = '1142/58 adminHome Bangkok';
         $user2->email = 'admin@localhost';
         $user2->save();
 

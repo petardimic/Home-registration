@@ -26,8 +26,8 @@ Route::get('profile', 'ProfileController@showProfile');
 Route::get('homeregis/{type}/{id_user}', 'HomeRegisController@showHomeRegis');
 Route::post('homeregis/{type}/{id_user}', 'HomeRegisController@postHomeRegis');
 
-Route::get('member', 'MemberController@showMember');
-Route::post('member', 'MemberController@postMember');
+Route::get('member/{type}', 'MemberController@showMember');
+Route::post('member/{type}', 'MemberController@postMember');
 
 
 Route::get('petition/{types}/{id_user}','PetitionController@showPetition');

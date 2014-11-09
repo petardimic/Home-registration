@@ -2,9 +2,12 @@
 
 class MemberController extends BaseController{
 
-	public function showMember()
+	public function showMember($type)
 	{
-		return View::make('member');
+            if($type == 4){
+                  return View::make('member')->with($type);
+            }
+                  else  return Redirect::back();
 	}
 
 	public function postMember(){

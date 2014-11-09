@@ -9,7 +9,16 @@
 @section('content')
 <h1>Member</h1>
 
-{{ Form::open(array('url' => 'member', 'class' => 'form-horizontal')) }}
+{{ Form::open(array('url' => 'member/'.$type, 'class' => 'form-horizontal')) }} 
+
+    <div class="control-group {{{ $errors->has('number') ? 'error' : '' }}}">
+        {{ Form::label('number', 'จำนวนสมาชิก', array('class' => 'control-label')) }}
+        <div class="controls">
+            {{ Form::text('number', Input::old('number')) }}
+            {{ $errors->first('number') }}
+        </div>
+    </div>
+
 	<!--Order No.-->
 	<div class="control-group {{{ $errors->has('orderNo') ? 'error' : '' }}}">
         {{ Form::label('orderNo', 'Order No.', array('class' => 'control-label')) }}

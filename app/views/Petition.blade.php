@@ -11,11 +11,19 @@
 
 {{ Form::open(array('url' => 'petition/'.$type.'/'.$id_increment, 'class' => 'form-horizontal')) }}
 
+    @if($type == 4)
+    <div class="control-group {{{ $errors->has('number') ? 'error' : '' }}}">
+        {{ Form::label('number', 'จำนวนสมาชิก', array('class' => 'control-label')) }}
+        <div class="controls">
+            {{ Form::text('number', Input::old('number')) }}
+            {{ $errors->first('number') }}
+        </div>
+    </div>
+    @endif
 
     <!-- Text Petition -->
     <div class="control-group {{{ $errors->has('textPetition') ? 'error' : '' }}}">
         {{ Form::label('textPetition', 'Detail', array('class' => 'control-label')) }}
-
         <div class="controls">
             <textarea name = "textPetition" rows="10" cols="50" ></textarea>
         </div>
