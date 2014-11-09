@@ -9,7 +9,7 @@
 @section('content')
 <h1>HomeRegis</h1>
 
-{{ Form::open(array('url' => 'homeregis/'.$type.'/'.$id_user, 'class' => 'form-horizontal')) }}
+{{ Form::open(array('url' => 'homeregis/'.$id_user, 'class' => 'form-horizontal')) }}
 	<!--Book No.-->
 	<div class="control-group {{{ $errors->has('bookNo') ? 'error' : '' }}}">
         {{ Form::label('bookNo', 'Book No.', array('class' => 'control-label')) }}

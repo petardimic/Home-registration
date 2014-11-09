@@ -2,11 +2,9 @@
 
 class HomeRegisController extends BaseController{
 
-	public function showHomeRegis($type,$id_user)
+	public function showHomeRegis($id_user)
 	{
-            if($type == 2){
-		    return View::make('homeregis')->with('type',$type)->with('id_user',$id_user); 
-            }else  return Redirect::back();
+		return View::make('homeregis')->with('id_user',$id_user); 
 	}
 
       public function mapHomeUser($id_user,$home_user){

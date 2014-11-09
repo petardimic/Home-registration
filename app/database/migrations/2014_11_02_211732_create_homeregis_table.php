@@ -25,6 +25,7 @@ class CreateHomeregisTable extends Migration {
 			$table->string('dateAssignAddr'); 
 			$table->string('registrar');
 			$table->string('typingDate');
+			$table->string('currentAddr');
 			$table->timestamps();
 		});
 	}

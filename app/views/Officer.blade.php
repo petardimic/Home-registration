@@ -37,7 +37,15 @@
     				<td> <?php echo User::find(petition::find($print->id)->name)->name?> </td>
     				<td> <?php echo $ty ?> </td>
     				<td> <?php echo $print->textPetition ?> </td>
-    				<td> {{ HTML::link('homeregis/'.$print->type.'/'.$print->name, 'ดำเนินการ') }} </td>
+                    @if($print->type == 1)
+                        <!-- <td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td> -->
+                    @elseif($print->type == 2) 
+                        <td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>
+                    @elseif($print->type == 3) 
+                        <!--<td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>
+                    @elseif($print->type == 4)
+                        <td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>-->
+                    @endif 
     			</tr>
     			@endforeach
 		</table>
