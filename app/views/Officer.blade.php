@@ -42,9 +42,9 @@
                     @elseif($print->type == 2) 
                         <td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>
                     @elseif($print->type == 3) 
-                        <!--<td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>
+                        <!--<td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>-->
                     @elseif($print->type == 4)
-                        <td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>-->
+                        <!--<td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>-->
                     @endif 
     			</tr>
     			@endforeach
