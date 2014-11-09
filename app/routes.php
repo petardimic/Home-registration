@@ -23,8 +23,8 @@ Route::post('register', 'RegisterController@postRegister');
 Route::get('profile', 'ProfileController@showProfile');
 //Route::post('profile', 'ProfileController@postProfile');
 
-Route::get('homeregis/{id_incre_pet}', 'HomeRegisController@showHomeRegis');
-Route::post('homeregis/{id_incre_pet}', 'HomeRegisController@postHomeRegis');
+Route::get('homeregis/{type}/{id_user}', 'HomeRegisController@showHomeRegis');
+Route::post('homeregis/{type}/{id_user}', 'HomeRegisController@postHomeRegis');
 
 Route::get('member', 'MemberController@showMember');
 Route::post('member', 'MemberController@postMember');

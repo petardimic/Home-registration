@@ -9,12 +9,11 @@
 @section('content')
 
 <div class="page-header">
-    <h2>Officer</h2>
+    <h1><font color="0000AA">User Petition</font></h1>
 </div>
 <div>
 	
 	<?php
-
 	$pet = petition::all();
     $user = user::all();
 	 ?>
@@ -23,8 +22,8 @@
 		<table style="width:100%">
   			<tr>
     			<th>Name</th>
-    			<th>Data</th>
     			<th>Type</th>
+    			<th>Data</th>
   			</tr>
  				@foreach($pet as $print)
  				<?php
@@ -35,10 +34,10 @@
  					else $ty = "เปลี่ยนแปลงข้อมูลผู้อาศัย";
  				?>
  				<tr>
-    				<td> <?php echo User::find(  petition::find(9)->name)->name?> </td>
-    				<td> <?php echo $print->textPetition ?> </td>
+    				<td> <?php echo User::find(petition::find($print->id)->name)->name?> </td>
     				<td> <?php echo $ty ?> </td>
-    				<td> {{ HTML::link('homeregis/'.$print->id, 'ดำเนินการ') }} </td>
+    				<td> <?php echo $print->textPetition ?> </td>
+    				<td> {{ HTML::link('homeregis/'.$print->type.'/'.$print->name, 'ดำเนินการ') }} </td>
     			</tr>
     			@endforeach
 		</table>

@@ -14,7 +14,7 @@
 
     <!-- Text Petition -->
     <div class="control-group {{{ $errors->has('textPetition') ? 'error' : '' }}}">
-        {{ Form::label('textPetition', 'Text Petition', array('class' => 'control-label')) }}
+        {{ Form::label('textPetition', 'Detail', array('class' => 'control-label')) }}
 
         <div class="controls">
             <textarea name = "textPetition" rows="10" cols="50" ></textarea>

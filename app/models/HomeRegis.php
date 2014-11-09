@@ -19,4 +19,8 @@ class HomeRegis extends Eloquent{
 	protected $fillable = array('bookNo','homeCode','regOffice','address','villageName','homeName','homeType',
 		'buildingType','dateAssignAddr','registrar','typingDate');
 
+	public function homeUser(){
+		 return $this->belongsToMany('User','home_pro');
+	}
+
 }
