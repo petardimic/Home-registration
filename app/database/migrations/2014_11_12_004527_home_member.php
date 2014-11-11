@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class HomePro extends Migration {
+class HomeMember extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -11,11 +12,9 @@ class HomePro extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('home_pro', function($table)
+		Schema::create('home_member', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('user_id');
-			$table->string('home_regis_id');
 			$table->timestamps();
 		});
 	}
@@ -27,7 +26,7 @@ class HomePro extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('home_pro');
+		Schema::drop('home_member');
 	}
 
 }

@@ -34,17 +34,16 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand" href="#">Laravel</a>
                 </div>
                 <!-- Everything you want hidden at 940px or less, place within here -->
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{{ URL::to('') }}}">Home</a></li>
+                        <li><a href="{{{ URL::to('') }}}">หน้าหลัก</a></li>
                         @if ( Auth::guest() )
-                            <li>{{ HTML::link('login', 'Login') }}</li>
+                            <li>{{ HTML::link('login', 'เข้าสู่ระบบ') }}</li>
                         @else
-                            <li><a href="{{{ URL::to('profile') }}}">Profile</a></li>
-                            <li>{{ HTML::link('logout', 'Logout') }}</li>
+                            <li><a href="{{{ URL::to('profile') }}}">บัญชีผู้ใช้</a></li>
+                            <li>{{ HTML::link('logout', 'ออกจากระบบ') }}</li>
                         @endif
                     </ul> 
                 </div>

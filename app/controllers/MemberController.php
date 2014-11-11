@@ -2,15 +2,12 @@
 
 class MemberController extends BaseController{
 
-	public function showMember($type)
+	public function showMember($id_user)
 	{
-            if($type == 4){
-                  return View::make('member')->with($type);
-            }
-                  else  return Redirect::back();
+            return View::make('member')->with('types',$id_user);
 	}
 
-	public function postMember(){
+	public function postMember($types){
 
 		 $memberdata = array(
                   'orderNo'		=> Input::get('orderNo'),
@@ -44,7 +41,7 @@ class MemberController extends BaseController{
             if ($validator->passes())
             {
                   Member::create($memberdata);
-                  return Redirect::to('member')->with('success', 'You have register in successfully');
+                  return Redirect::to('officer')->with('success', 'You have register in successfully');
             }
             else {
            // Something went wrong.

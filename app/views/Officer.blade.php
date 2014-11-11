@@ -9,7 +9,7 @@
 @section('content')
 
 <div class="page-header">
-    <h1><font color="0000AA">User Petition</font></h1>
+    <h1><font color="0000AA">คำร้อง</font></h1>
 </div>
 <div>
 	
@@ -18,12 +18,12 @@
     $user = user::all();
 	 ?>
 		@if($pet != null)
-		<p><B>Petition Table</B></p>
+		<p><B>คำร้องทั้งหมด</B></p>
 		<table style="width:100%">
   			<tr>
-    			<th>Name</th>
-    			<th>Type</th>
-    			<th>Data</th>
+    			<th>ชื่อผู้ส่งคำร้อง</th>
+                <th>ชนิดคำร้อง</th>
+                <th>รายละเอียด</th>
   			</tr>
  				@foreach($pet as $print)
  				<?php
@@ -42,9 +42,9 @@
                     @elseif($print->type == 2) 
                         <td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>
                     @elseif($print->type == 3) 
-                        <!--<td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>
+                        <!--<td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>-->
                     @elseif($print->type == 4)
-                        <td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>-->
+                        <td> {{ HTML::link('member/'.$print->name, 'ดำเนินการ') }} </td>
                     @endif 
     			</tr>
     			@endforeach

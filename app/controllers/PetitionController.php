@@ -27,8 +27,8 @@ class PetitionController extends BaseController {
         	$new_pet->type = $type;
         	$new_pet->name = User::find($id_increment)->id;
         	$new_pet->save();
-        	return Redirect::to('profile')->with('success', 'You have register in successfully');
-        }
+			return Redirect::to('petition/'.$type.'/'.$id_increment)->with('success','You have register in successfully'); 
+		}
         else
         {
         	return Redirect::back()->withErrors($validator)->withInput(Input::except('fail'));
