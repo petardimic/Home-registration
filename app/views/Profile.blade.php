@@ -6,7 +6,9 @@
 @stop
 
 @section('content')
-<h1><font color="79CDCD">Profile</font></h1>
+<div class="page-header">
+<h1><font color="79CDCD">บัญชีผู้ใช้</font></h1>
+</div>
 <p>
 	<B>
 	<?php	
@@ -30,26 +32,19 @@
 	?>
 	<br><B>
 	<?php
-		echo "Address : ";
-	?>
-	</B>
-	<?php
-		echo $users->address;
-	?>
-	<br><B>
-	<?php
 		echo "E-mail : "; 
 	?>
 	</B>
 	<?php
 		echo $users->email;
+		$homeUser = HomeRegis::all();
+		$homeRole = HomeProData::all();
 	?>
 		<br></br>
-
 	@if($users->permission == "Admin")
     	<div class="control-group">
         	<div class="controls">
-            	{{ HTML::link('register', 'AddOfficer') }}
+            	{{ HTML::link('register', 'เพิ่มเจ้าหน้าที่ในระบบ') }}
         	</div>
     	</div>
     @elseif($users->permission == "Officer")
@@ -61,13 +56,30 @@
     @else
     	<div class="control-group">
         	<div class="controls">
-            	{{ HTML::link('petition/1/'.$users->id, 'ส่งคำร้องขอย้ายที่อยู่') }}
-            	<br>
-            	{{ HTML::link('petition/2/'.$users->id, 'ส่งคำร้องขอทะเบียนบ้านใหม่') }}
-            	<br>
-            	{{ HTML::link('petition/3/'.$users->id, 'ส่งคำร้องขอเปลี่ยนเจ้าของที่อยู่') }}
-            	<br>
-            	{{ HTML::link('petition/4/'.$users->id, 'ส่งคำร้องขอเปลี่ยนแปลงข้อมูลผู้อยู่อาศัย') }}
+        		<p><B>รายการที่อยู่</B></p>
+				<table style="width:100%">
+					<tr>
+						<th>ชื่อ-นามสกุล</th>
+    					<th>ที่อยู่</th>
+					</tr>
+					@foreach($homeRole as $print)
+					<tr>
+						@if((HomeProData::find($print->id)->user_id == $users->id) && (HomeProData::find($print->id)->home_regis_id == HomeRegis::find(HomeProData::find($print->id)->home_regis_id)->id))
+							<td><?php echo $users->name." ".$users->surname; ?></td>
+							<td><?php echo HomeRegis::find(HomeProData::find($print->id)->home_regis_id)->address; ?></td>
+						@endif
+					</tr>
+    				@endforeach
+				</table>
+				<div class="page-header">
+				</div>
+            	{{ HTML::link('petition/1/'.$users->id, 'ส่งคำร้องขอย้ายที่อยู่',array('class' => 'btn btn-primary')) }}
+ 
+            	{{ HTML::link('petition/2/'.$users->id, 'ส่งคำร้องขอทะเบียนบ้านใหม่',array('class' => 'btn btn-info')) }}
+            	
+            	{{ HTML::link('petition/3/'.$users->id, 'ส่งคำร้องขอเปลี่ยนเจ้าของที่อยู่',array('class' => 'btn btn-primary')) }}
+            	
+            	{{ HTML::link('petition/4/'.$users->id, 'ส่งคำร้องขอเปลี่ยนแปลงข้อมูลผู้อยู่อาศัย',array('class' => 'btn btn-info')) }}
         	</div>
     	</div>
 	@endif

@@ -9,14 +9,14 @@
 {{-- Content --}}
 @section('content')
 <div class="page-header">
-    <h2>Register</h2>
+    <h1><font color="79CDCD">ลงทะเบียน</font></h1>
 </div>
 
 {{ Form::open(array('url' => 'register', 'class' => 'form-horizontal')) }}
 
     <!-- Userame -->
     <div class="control-group {{{ $errors->has('username') ? 'error' : '' }}}">
-        {{ Form::label('username', 'Username', array('class' => 'control-label')) }}
+        {{ Form::label('username', 'ชื่อผู้ใช้', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('username', Input::old('username')) }}
@@ -26,7 +26,7 @@
 
     <!-- Password -->
     <div class="control-group {{{ $errors->has('password') ? 'error' : '' }}}">
-        {{ Form::label('password', 'Password', array('class' => 'control-label')) }}
+        {{ Form::label('password', 'รหัสผ่าน', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::password('password') }}
@@ -36,7 +36,7 @@
 
     <!-- Name -->
     <div class="control-group {{{ $errors->has('name') ? 'error' : '' }}}">
-        {{ Form::label('name', 'Name', array('class' => 'control-label')) }}
+        {{ Form::label('name', 'ชื่อ', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('name', Input::old('name')) }}
@@ -46,7 +46,7 @@
 
     <!-- SurName -->
     <div class="control-group {{{ $errors->has('surname') ? 'error' : '' }}}">
-        {{ Form::label('surname', 'Surname', array('class' => 'control-label')) }}
+        {{ Form::label('surname', 'นามสกุล', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('surname', Input::old('surname')) }}
@@ -56,7 +56,7 @@
 
     <!-- ID-card -->
     <div class="control-group {{{ $errors->has('idcard') ? 'error' : '' }}}">
-        {{ Form::label('idcard', 'ID Number', array('class' => 'control-label')) }}
+        {{ Form::label('idcard', 'เลขบัตรประจำตัวประชาชน', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('idcard', Input::old('idcard')) }}
@@ -66,7 +66,7 @@
     
     <!-- Email -->
     <div class="control-group {{{ $errors->has('email') ? 'error' : '' }}}">
-        {{ Form::label('email', 'E-mail', array('class' => 'control-label')) }}
+        {{ Form::label('email', 'อีเมลล์', array('class' => 'control-label')) }}
 
          <div class="controls">
             {{ Form::text('email', Input::old('email')) }}
@@ -78,7 +78,7 @@
     <br>
     <div class="control-group">
         <div class="controls">
-            {{ Form::submit('Submit', array('class' => 'btn')) }}
+            {{ Form::submit('ลงทะเบียน', array('class' => 'btn')) }}
         </div>
     </div>
     {{ Form::close() }}

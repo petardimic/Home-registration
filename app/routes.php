@@ -35,5 +35,4 @@ Route::post('petition/{types}/{id_user}','PetitionController@postPetition');
 
 Route::get('officer','OfficerController@showOfficer');
 
-
 ?>
