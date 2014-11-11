@@ -23,4 +23,9 @@ class HomeRegis extends Eloquent{
 		 return $this->belongsToMany('User','home_pro');
 	}
 
+	public function homeMembers(){
+		return $this->belongsToMany('Member','home_member');
+
+	}
+
 }

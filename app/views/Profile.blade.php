@@ -74,11 +74,11 @@
 				</table>
 				<div class="page-header">
 				</div>
-            	{{ HTML::link('petition/1/'.$users->id, 'ส่งคำร้องขอย้ายที่อยู่',array('class' => 'btn btn-primary')) }}
+            	{{ HTML::link('move/1/'.$users->id, 'ส่งคำร้องขอย้ายที่อยู่',array('class' => 'btn btn-primary')) }}
  
             	{{ HTML::link('petition/2/'.$users->id, 'ส่งคำร้องขอทะเบียนบ้านใหม่',array('class' => 'btn btn-info')) }}
             	
-            	{{ HTML::link('petition/3/'.$users->id, 'ส่งคำร้องขอเปลี่ยนเจ้าของที่อยู่',array('class' => 'btn btn-primary')) }}
+            	{{ HTML::link('changeOwner/3/'.$users->id, 'ส่งคำร้องขอเปลี่ยนเจ้าของที่อยู่',array('class' => 'btn btn-primary')) }}
             	
             	{{ HTML::link('petition/4/'.$users->id, 'ส่งคำร้องขอเปลี่ยนแปลงข้อมูลผู้อยู่อาศัย',array('class' => 'btn btn-info')) }}
         	</div>

@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 class HomeMember extends Migration {
@@ -12,9 +11,11 @@ class HomeMember extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('home_member', function(Blueprint $table)
+		Schema::create('home_member', function($table)
 		{
 			$table->increments('id');
+			$table->string('home_id');
+			$table->string('member_id');
 			$table->timestamps();
 		});
 	}

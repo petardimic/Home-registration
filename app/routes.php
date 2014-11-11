@@ -35,5 +35,10 @@ Route::post('petition/{types}/{id_user}','PetitionController@postPetition');
 
 Route::get('officer','OfficerController@showOfficer');
 
+Route::get('move/{types}/{id_user}','MoveController@showMove');
+
+Route::get('movehavehome/{types}/{id_user}','MoveHaveHomeController@showMoveHaveHome');
+
+Route::get('changeOwner/{types}/{id_user}','ChangeOwnerController@showChange');
 
 ?>

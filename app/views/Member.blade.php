@@ -11,7 +11,7 @@
     <h1><font color="79CDCD">สมาชิกภายในบ้าน</font></h1>
 </div>
 
-{{ Form::open(array('url' => 'member/'.$types, 'class' => 'form-horizontal')) }} 
+{{ Form::open(array('url' => 'member/'.$id_users, 'class' => 'form-horizontal')) }} 
 
 	<!--Order No.-->
 	<div class="control-group {{{ $errors->has('orderNo') ? 'error' : '' }}}">
