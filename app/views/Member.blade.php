@@ -7,15 +7,21 @@
 
 {{--Content--}}
 @section('content')
-<div class="page-header">
-    <h1><font color="79CDCD">สมาชิกภายในบ้าน</font></h1>
-</div>
+<h1>Member</h1>
 
 {{ Form::open(array('url' => 'member/'.$type, 'class' => 'form-horizontal')) }} 
 
+    <div class="control-group {{{ $errors->has('number') ? 'error' : '' }}}">
+        {{ Form::label('number', 'จำนวนสมาชิก', array('class' => 'control-label')) }}
+        <div class="controls">
+            {{ Form::text('number', Input::old('number')) }}
+            {{ $errors->first('number') }}
+        </div>
+    </div>
+
 	<!--Order No.-->
 	<div class="control-group {{{ $errors->has('orderNo') ? 'error' : '' }}}">
-        {{ Form::label('orderNo', 'ลำดับที่', array('class' => 'control-label')) }}
+        {{ Form::label('orderNo', 'Order No.', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('orderNo', Input::old('orderNo')) }}
@@ -25,7 +31,7 @@
 
     <!--Name-->
     <div class="control-group {{{ $errors->has('name') ? 'error' : '' }}}">
-        {{ Form::label('name', 'ชื่อขนามสุก', array('class' => 'control-label')) }}
+        {{ Form::label('name', 'Name', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('name', Input::old('name')) }}
@@ -35,7 +41,7 @@
 
     <!--Nationality-->
     <div class="control-group {{{ $errors->has('nationality') ? 'error' : '' }}}">
-        {{ Form::label('nationality', 'สัญชาติ', array('class' => 'control-label')) }}
+        {{ Form::label('nationality', 'Nationality', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('nationality', Input::old('nationality')) }}
@@ -45,7 +51,7 @@
 
     <!--gender-->
     <div class="control-group {{{ $errors->has('gender') ? 'error' : '' }}}">
-        {{ Form::label('gender', 'เพศ', array('class' => 'control-label')) }}
+        {{ Form::label('gender', 'Gender', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('gender', Input::old('gender')) }}
@@ -55,7 +61,7 @@
 
     <!--idNumber-->
     <div class="control-group {{{ $errors->has('idNumber') ? 'error' : '' }}}">
-        {{ Form::label('idNumber', 'เลขประจำตัวประชาชน', array('class' => 'control-label')) }}
+        {{ Form::label('idNumber', 'ID Number', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('idNumber', Input::old('idNumber')) }}
@@ -65,7 +71,7 @@
 
     <!--status-->
     <div class="control-group {{{ $errors->has('status') ? 'error' : '' }}}">
-        {{ Form::label('status', 'สถานะ', array('class' => 'control-label')) }}
+        {{ Form::label('status', 'Status', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('status', Input::old('status')) }}
@@ -75,7 +81,7 @@
 
     <!--birthDate-->
     <div class="control-group {{{ $errors->has('birthDate') ? 'error' : '' }}}">
-        {{ Form::label('birthDate', 'เกิดวันที่', array('class' => 'control-label')) }}
+        {{ Form::label('birthDate', 'Birth Date', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('birthDate', Input::old('birthDate')) }}
@@ -85,7 +91,7 @@
 
     <!--fatherData-->
     <div class="control-group {{{ $errors->has('fatherData') ? 'error' : '' }}}">
-        {{ Form::label('fatherData', 'ข้อมูลบิด', array('class' => 'control-label')) }}
+        {{ Form::label('fatherData', 'Father Data', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('fatherData', Input::old('fatherData')) }}
@@ -95,7 +101,7 @@
 
     <!--motherData-->
     <div class="control-group {{{ $errors->has('motherData') ? 'error' : '' }}}">
-        {{ Form::label('motherData', 'ข้อมูลมารดา', array('class' => 'control-label')) }}
+        {{ Form::label('motherData', 'Mother Data', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('motherData', Input::old('motherData')) }}
@@ -105,7 +111,7 @@
 
     <!--comeFrom-->
     <div class="control-group {{{ $errors->has('comeFrom') ? 'error' : '' }}}">
-        {{ Form::label('comeFrom', 'มาจาก', array('class' => 'control-label')) }}
+        {{ Form::label('comeFrom', 'Come From', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('comeFrom', Input::old('comeFrom')) }}
@@ -115,7 +121,7 @@
 
     <!--goTo-->
     <div class="control-group {{{ $errors->has('goTo') ? 'error' : '' }}}">
-        {{ Form::label('goTo', 'ไปที่', array('class' => 'control-label')) }}
+        {{ Form::label('goTo', 'Go To', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('goTo', Input::old('goTo')) }}

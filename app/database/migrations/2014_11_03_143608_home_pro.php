@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 class HomePro extends Migration {
@@ -11,7 +12,7 @@ class HomePro extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('home_pro', function($table)
+		Schema::create('home_pro', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('user_id');
@@ -29,4 +30,5 @@ class HomePro extends Migration {
 	{
 		Schema::drop('home_pro');
 	}
+
 }

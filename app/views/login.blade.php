@@ -8,14 +8,14 @@
 {{-- Content --}}
 @section('content')
 <div class="page-header">
-    <h1><font color="79CDCD">เข้าสู่ระบบ</font></h1>
+    <h2>Login into your account</h2>
 </div>
 
 {{ Form::open(array('url' => 'login', 'class' => 'form-horizontal')) }}
 
     <!-- Name -->
     <div class="control-group {{{ $errors->has('username') ? 'error' : '' }}}">
-        {{ Form::label('username', 'ชื่อผู้ใช้', array('class' => 'control-label')) }}
+        {{ Form::label('username', 'Username', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::text('username', Input::old('username')) }}
@@ -25,7 +25,7 @@
 
     <!-- Password -->
     <div class="control-group {{{ $errors->has('password') ? 'error' : '' }}}">
-        {{ Form::label('password', 'รหัสผ่าน', array('class' => 'control-label')) }}
+        {{ Form::label('password', 'Password', array('class' => 'control-label')) }}
 
         <div class="controls">
             {{ Form::password('password') }}
@@ -37,8 +37,8 @@
     <br></br>
     <div class="control-group">
         <div class="controls">
-            {{ Form::submit('เข้าสู่ระบบ', array('class' => 'btn btn-primary')) }}
-            {{ HTML::link('register', 'ลงทะเบียน',array('class' => 'btn btn-success')) }}
+            {{ Form::submit('Login', array('class' => 'btn')) }}
+            {{ HTML::link('register', 'Register') }}
         </div>
     </div>
 
