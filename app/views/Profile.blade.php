@@ -37,6 +37,18 @@
 	</B>
 	<?php
 		echo $users->email;
+	?>
+	<br><B>
+	<?php
+		echo "ที่อยู่ปัจจุบัน : "; 
+	?>
+	</B>
+	<?php
+		$home = HomeRegis::find($users->currentAddr);
+		echo $home->address;
+	?>
+
+	<?php 
 		$homeUser = HomeRegis::all();
 		$homeRole = HomeProData::all();
 	?>
@@ -67,14 +79,19 @@
 					<tr>
 						@if((HomeProData::find($print->id)->user_id == $users->id) && (HomeProData::find($print->id)->home_regis_id == HomeRegis::find(HomeProData::find($print->id)->home_regis_id)->id))
 							<td><?php echo $users->name." ".$users->surname; ?></td>
-							<td><?php echo HomeRegis::find(HomeProData::find($print->id)->home_regis_id)->address; ?></td>
+							<?php 
+								$addr = HomeRegis::find(HomeProData::find($print->id)->home_regis_id)->address;
+								$id_home = HomeProData::find($print->id)->home_regis_id;
+							?>
+							<td><?php echo $addr; ?></td>
+							<td>{{ HTML::link('currentAddr/'.$users->id.'/'.$id_home, 'ตั้งค่าเป็นที่อยู่ปัจจุบัน', array('class' => 'btn btn-danger')) }}</td>
 						@endif
 					</tr>
     				@endforeach
 				</table>
 				<div class="page-header">
 				</div>
-            	{{ HTML::link('move/1/'.$users->id, 'ส่งคำร้องขอย้ายที่อยู่',array('class' => 'btn btn-primary')) }}
+            	{{ HTML::link('petition/1/'.$users->id, 'ส่งคำร้องขอย้ายที่อยู่',array('class' => 'btn btn-primary')) }}
  
             	{{ HTML::link('petition/2/'.$users->id, 'ส่งคำร้องขอทะเบียนบ้านใหม่',array('class' => 'btn btn-info')) }}
             	

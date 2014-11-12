@@ -23,6 +23,9 @@ Route::post('register', 'RegisterController@postRegister');
 Route::get('profile', 'ProfileController@showProfile');
 //Route::post('profile', 'ProfileController@postProfile');
 
+Route::get('currentAddr/{id_user}/{id_home}', 'CurrentAddrController@showCurrentAddr');
+Route::post('currentAddr/{id_user}/{id_home}', 'CurrentAddrController@postCurrentAddr');
+
 Route::get('homeregis/{id_user}', 'HomeRegisController@showHomeRegis');
 Route::post('homeregis/{id_user}', 'HomeRegisController@postHomeRegis');
 
@@ -34,10 +37,6 @@ Route::get('petition/{types}/{id_user}','PetitionController@showPetition');
 Route::post('petition/{types}/{id_user}','PetitionController@postPetition');
 
 Route::get('officer','OfficerController@showOfficer');
-
-Route::get('move/{types}/{id_user}','MoveController@showMove');
-
-Route::get('movehavehome/{types}/{id_user}','MoveHaveHomeController@showMoveHaveHome');
 
 Route::get('changeOwner/{types}/{id_user}','ChangeOwnerController@showChange');
 
