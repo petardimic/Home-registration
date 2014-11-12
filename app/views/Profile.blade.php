@@ -44,8 +44,12 @@
 	?>
 	</B>
 	<?php
-		$home = HomeRegis::find($users->currentAddr);
-		echo $home->address;
+		if(empty(DB::table('homeregis'))){
+			$home = HomeRegis::find($users->currentAddr);
+			echo $home->address;
+		}else {
+			echo "ไม่มี";
+		}
 	?>
 
 	<?php 
@@ -79,9 +83,11 @@
 					<tr>
 						@if((HomeProData::find($print->id)->user_id == $users->id) && (HomeProData::find($print->id)->home_regis_id == HomeRegis::find(HomeProData::find($print->id)->home_regis_id)->id))
 							<td><?php echo $users->name." ".$users->surname; ?></td>
-							<?php 
-								$addr = HomeRegis::find(HomeProData::find($print->id)->home_regis_id)->address;
-								$id_home = HomeProData::find($print->id)->home_regis_id;
+							<?php
+								if(empty(DB::table('homeregis')) && empty(DB::table('home_pro'))){
+									$addr = HomeRegis::find(HomeProData::find($print->id)->home_regis_id)->address;
+									$id_home = HomeProData::find($print->id)->home_regis_id;
+								}
 							?>
 							<td><?php echo $addr; ?></td>
 							<td>{{ HTML::link('currentAddr/'.$users->id.'/'.$id_home, 'ตั้งค่าเป็นที่อยู่ปัจจุบัน', array('class' => 'btn btn-danger')) }}</td>

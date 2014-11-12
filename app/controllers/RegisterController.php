@@ -16,7 +16,8 @@ class RegisterController extends BaseController {
             'name'	   => Input::get('name'),
             'surname'  => Input::get('surname'),
             'idcard'   => Input::get('idcard'),
-            'email'    => Input::get('email')
+            'email'    => Input::get('email'),
+            'currentAddr'    => '0'
         );
 
         // Declare the rules for the form validation.
@@ -26,7 +27,8 @@ class RegisterController extends BaseController {
             'name'		=> 'Required',
             'surname'   => 'Required',
             'idcard'    => 'Required',
-            'email'		=> 'Required'
+            'email'		=> 'Required',
+            'currentAddr'    => 'Required'
         );
 
         // Validate the inputs.
