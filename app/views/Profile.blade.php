@@ -44,12 +44,11 @@
 	?>
 	</B>
 	<?php
-		if(empty(DB::table('homeregis'))){
+		if(!empty(DB::table('homeregis'))){
 			$home = HomeRegis::find($users->currentAddr);
-			echo $home->address;
-		}else {
-			echo "ไม่มี";
-		}
+			if($home != null)	echo $home->address;
+			else echo "ไม่มีข้อมูล";
+		}else echo "ไม่มีข้อมูล";
 	?>
 
 	<?php 
@@ -85,6 +84,10 @@
 							<td><?php echo $users->name." ".$users->surname; ?></td>
 							<?php
 								if(empty(DB::table('homeregis')) && empty(DB::table('home_pro'))){
+									$addr = HomeRegis::find(HomeProData::find($print->id)->home_regis_id)->address;
+									$id_home = HomeProData::find($print->id)->home_regis_id;
+								}
+								else{
 									$addr = HomeRegis::find(HomeProData::find($print->id)->home_regis_id)->address;
 									$id_home = HomeProData::find($print->id)->home_regis_id;
 								}

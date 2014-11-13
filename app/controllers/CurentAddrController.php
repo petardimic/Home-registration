@@ -9,9 +9,20 @@ class CurrentAddrController extends BaseController {
 
 	public function postCurrentAddr($id_users,$id_homes)
 	{
-		$users = User::find(Auth::id());
-		$users->currentAddr = $id_homes;
-		$users->save();
-		return Redirect::to('profile');
+		if(User::find(Auth::id())->permission == "User"){
+			$new_pet = new Petition;
+			$new_pet->textPetition = HomeRegis::find($id_homes)->address;
+			$new_pet->type = '5';
+			$new_pet->name = $id_users;
+			$new_pet->home = $id_homes;
+			$new_pet->save();
+			return Redirect::to('profile');
+		}else {
+			$user = User::find($id_users);
+			$user->currentAddr = $id_homes;
+			$user->save();
+			return Redirect::to('officer');
+		}
+
 	}
 }

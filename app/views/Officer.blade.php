@@ -31,7 +31,8 @@
  					if($print->type == 1) $ty ="ย้ายที่อยู่";
  					else if($print->type == 2) $ty = "ขอทะเบียนบ้านใหม่";
  					else if($print->type == 3) $ty = "เปลี่ยนเจ้าของที่อยู่";
- 					else $ty = "เปลี่ยนแปลงข้อมูลผู้อาศัย";
+ 					else if($print->type == 4 )$ty = "เปลี่ยนแปลงข้อมูลผู้อาศัย";
+                    else $ty = "ตั้งค่าเป็นที่อยู่ปัจจุบัน";
  				?>
  				<tr>
     				<td> <?php echo User::find(petition::find($print->id)->name)->name?> </td>
@@ -45,6 +46,8 @@
                         <td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>
                     @elseif($print->type == 4)
                         <td> {{ HTML::link('member/'.$print->name, 'ดำเนินการ') }} </td>
+                    @else
+                        <td> {{ HTML::link('currentAddr/'.$print->name.'/'.$print->home, 'ดำเนินการ') }} </td>
                     @endif 
     			</tr>
     			@endforeach
