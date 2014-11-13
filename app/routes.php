@@ -40,4 +40,6 @@ Route::get('officer','OfficerController@showOfficer');
 
 Route::get('changeOwner/{types}/{id_user}','ChangeOwnerController@showChange');
 
+Route::get('deleteRecord','DeleteController@showDelete');
+
 ?>

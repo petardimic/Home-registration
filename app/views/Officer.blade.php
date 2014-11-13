@@ -52,7 +52,8 @@
     			</tr>
     			@endforeach
 		</table>
-
+        <div class="page-header"></div>
+        {{ HTML::link('deleteRecord', 'ลบคำร้องที่ดำเนินการแล้ว',array('class' => 'btn btn-danger')) }}
 	@else
 		<?php echo "Petition Table is empty."; ?>
 	@endif
