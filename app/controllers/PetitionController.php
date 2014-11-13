@@ -26,6 +26,7 @@ class PetitionController extends BaseController {
         	$new_pet=Petition::create($petitiondata);
         	$new_pet->type = $type;
         	$new_pet->name = User::find($id_increment)->id;
+        	$new_pet->status = '0';
         	$new_pet->save();
 			return Redirect::to('petition/'.$type.'/'.$id_increment)->with('success','You have register in successfully'); 
 		}

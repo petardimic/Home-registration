@@ -14,8 +14,8 @@
 <div>
 	
 	<?php
-	$pet = petition::all();
-    $user = user::all();
+	   $pet = petition::all();
+        $user = user::all();
 	 ?>
 		@if($pet != null)
 		<p><B>คำร้องทั้งหมด</B></p>
@@ -39,11 +39,11 @@
     				<td> <?php echo $ty ?> </td>
     				<td> <?php echo $print->textPetition ?> </td>
                     @if($print->type == 1)
-                        <td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>
+                        <td> {{ HTML::link('homeregis/'.$print->id, 'ดำเนินการ') }} </td>
                     @elseif($print->type == 2) 
-                        <td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>
+                        <td> {{ HTML::link('homeregis/'.$print->id, 'ดำเนินการ') }} </td>
                     @elseif($print->type == 3) 
-                        <td> {{ HTML::link('homeregis/'.$print->name, 'ดำเนินการ') }} </td>
+                        <td> {{ HTML::link('homeregis/'.$print->id, 'ดำเนินการ') }} </td>
                     @elseif($print->type == 4)
                         <td> {{ HTML::link('member/'.$print->name, 'ดำเนินการ') }} </td>
                     @else
@@ -52,6 +52,7 @@
     			</tr>
     			@endforeach
 		</table>
+
 	@else
 		<?php echo "Petition Table is empty."; ?>
 	@endif

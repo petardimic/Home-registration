@@ -9,7 +9,7 @@
 @section('content')
 <h1><font color="79CDCD">ทะเบียนบ้าน</font></h1>
 
-{{ Form::open(array('url' => 'homeregis/'.$id_user, 'class' => 'form-horizontal')) }}
+{{ Form::open(array('url' => 'homeregis/'.$id_pet, 'class' => 'form-horizontal')) }}
 	<!--Book No.-->
 	<div class="control-group {{{ $errors->has('bookNo') ? 'error' : '' }}}">
         {{ Form::label('bookNo', 'เล่มที่', array('class' => 'control-label')) }}

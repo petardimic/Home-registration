@@ -2,16 +2,16 @@
 
 class HomeRegisController extends BaseController{
 
-	public function showHomeRegis($id_user)
+	public function showHomeRegis($id_pet)
 	{
-		return View::make('homeregis')->with('id_user',$id_user); 
+		return View::make('homeregis')->with('id_pet',$id_pet); 
 	}
 
       public function mapHomeUser($id_user,$home_user){
             $home_user->homeUser()->attach($id_user);
       }
 
-	public function postHomeRegis($id_user){
+	public function postHomeRegis($id_pet){
 
 		 $homedata = array(
                   'bookNo'		=> Input::get('bookNo'), //Book Number
@@ -45,7 +45,10 @@ class HomeRegisController extends BaseController{
             if ($validator->passes())
             {
                   $home_user = HomeRegis::create($homedata);
-                  HomeRegisController::mapHomeUser($id_user,$home_user);
+                  $pet = Petition::find($id_pet);
+                  $pet->status = '1';
+                  $pet->save();
+                  HomeRegisController::mapHomeUser($pet->name,$home_user);
                   return Redirect::to('profile')->with('success', 'You have register in successfully');
             }
             else {

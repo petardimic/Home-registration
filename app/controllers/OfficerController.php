@@ -12,5 +12,4 @@ class OfficerController extends BaseController {
 		}
 	}
 
-	
 }		

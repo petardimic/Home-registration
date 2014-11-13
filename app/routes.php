@@ -23,11 +23,11 @@ Route::post('register', 'RegisterController@postRegister');
 Route::get('profile', 'ProfileController@showProfile');
 //Route::post('profile', 'ProfileController@postProfile');
 
-Route::get('currentAddr/{id_user}/{id_home}', 'CurrentAddrController@showCurrentAddr');
-Route::post('currentAddr/{id_user}/{id_home}', 'CurrentAddrController@postCurrentAddr');
+Route::get('currentAddr/{id}/{id_home}', 'CurrentAddrController@showCurrentAddr');
+Route::post('currentAddr/{id}/{id_home}', 'CurrentAddrController@postCurrentAddr');
 
-Route::get('homeregis/{id_user}', 'HomeRegisController@showHomeRegis');
-Route::post('homeregis/{id_user}', 'HomeRegisController@postHomeRegis');
+Route::get('homeregis/{id_pet}', 'HomeRegisController@showHomeRegis');
+Route::post('homeregis/{id_pet}', 'HomeRegisController@postHomeRegis');
 
 Route::get('member/{id_user}', 'MemberController@showMember');
 Route::post('member/{id_user}', 'MemberController@postMember');

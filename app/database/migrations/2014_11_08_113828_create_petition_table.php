@@ -17,6 +17,7 @@ class CreatePetitionTable extends Migration {
 			$table->string('name');
 			$table->string('type');
 			$table->string('home');
+			$table->string('status');
 			$table->string('textPetition');
 			$table->timestamps();
 		});
