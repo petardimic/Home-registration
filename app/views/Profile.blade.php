@@ -93,7 +93,7 @@
 								}
 							?>
 							<td><?php echo $addr; ?></td>
-							<td>{{ HTML::link('currentAddr/'.$print->id.'/'.$id_home, 'ตั้งค่าเป็นที่อยู่ปัจจุบัน', array('class' => 'btn btn-danger')) }}</td>
+							<td>{{ HTML::link('currentAddr/'.$print->id.'/'.$users->id.'/'.$id_home, 'ตั้งค่าเป็นที่อยู่ปัจจุบัน', array('class' => 'btn btn-danger')) }}</td>
 						@endif
 					</tr>
     				@endforeach

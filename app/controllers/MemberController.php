@@ -44,7 +44,6 @@ class MemberController extends BaseController{
 		$validator = Validator::make($memberdata, $member);
             if ($validator->passes())
             {
-
                   $someone = Member::create($memberdata);
                   MemberController::mapHomeMember($id_users,$someone);
                   return Redirect::to('officer')->with('success', 'You have register in successfully');

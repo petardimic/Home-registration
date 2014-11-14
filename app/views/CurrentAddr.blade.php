@@ -8,7 +8,7 @@
 
 @section('content')
 	<br></br>
-{{ Form::open(array('url' => 'currentAddr/'.$id_pet.'/'.$id_homes, 'class' => 'form-horizontal')) }}
+{{ Form::open(array('url' => 'currentAddr/'.$id_pet.'/'.$id_user.'/'.$id_homes, 'class' => 'form-horizontal')) }}
 <?php $user = User::find(Auth::id()); ?>
 @if($user->permission == "User")
 	<h4><font color="77777">ส่งข้อมูลเรียบร้อย</font></h4>

@@ -23,8 +23,8 @@ Route::post('register', 'RegisterController@postRegister');
 Route::get('profile', 'ProfileController@showProfile');
 //Route::post('profile', 'ProfileController@postProfile');
 
-Route::get('currentAddr/{id}/{id_home}', 'CurrentAddrController@showCurrentAddr');
-Route::post('currentAddr/{id}/{id_home}', 'CurrentAddrController@postCurrentAddr');
+Route::get('currentAddr/{id}/{id_user}/{id_home}', 'CurrentAddrController@showCurrentAddr');
+Route::post('currentAddr/{id}/{id_user}/{id_home}', 'CurrentAddrController@postCurrentAddr');
 
 Route::get('homeregis/{id_pet}', 'HomeRegisController@showHomeRegis');
 Route::post('homeregis/{id_pet}', 'HomeRegisController@postHomeRegis');
@@ -40,6 +40,7 @@ Route::get('officer','OfficerController@showOfficer');
 
 Route::get('changeOwner/{types}/{id_user}','ChangeOwnerController@showChange');
 
-Route::get('deleteRecord','DeleteController@showDelete');
+Route::get('deleteRecord/{id}','DeleteController@showDelete');
+Route::get('deleteRecord/{id}','DeleteController@deletePetition');
 
 ?>

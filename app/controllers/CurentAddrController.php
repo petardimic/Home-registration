@@ -2,23 +2,23 @@
 
 class CurrentAddrController extends BaseController {
 
-	public function showCurrentAddr($id,$id_home)
+	public function showCurrentAddr($id,$users_id,$id_home)
 	{
-		return View::make('currentAddr')->with('id_pet',$id)->with('id_homes',$id_home);
+		return View::make('currentAddr')->with('id_pet',$id)->with('id_user',$users_id)->with('id_homes',$id_home);
 	}
 
-	public function postCurrentAddr($id_pet,$id_homes)
+	public function postCurrentAddr($id_pet,$id_user,$id_homes)
 	{
-		if(User::find(Auth::id())->permission == "User"){
+		if(User::find(Auth::id())->permission == 'User'){
 			$new_pet = new Petition;
 			$new_pet->textPetition = HomeRegis::find($id_homes)->address;
 			$new_pet->type = '5';
-			$new_pet->name = Petition::find($id_pet)->name;
+			$new_pet->name = $id_user;
 			$new_pet->home = $id_homes;
 			$new_pet->status = '0';
 			$new_pet->save();
 			return Redirect::to('profile');
-		}else {
+		}else{
 			$user = User::find(Petition::find($id_pet)->name);
 			$user->currentAddr = $id_homes;
 			$user->save();
